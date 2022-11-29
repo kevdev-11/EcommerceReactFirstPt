@@ -1,0 +1,271 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  max-width: 100%;
+  min-height: 100vh;
+
+}
+
+.detailed_items{
+width: 300px;
+height: 300px;
+}
+
+
+.details_box_container{
+  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-direction: column;
+  /* border: 3px solid yellow; */
+}
+
+.row-container-details{
+  width: 100%;
+  display: flex;
+  gap: 80px;
+  line-height: 33px;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-details-product{
+  padding-top: 20px;
+  display: flex;
+  height: max-content;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quantity_btn{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(196, 183, 183);
+  color:black;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 1px;
+  border: 1px solid rgb(228, 213, 213);
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.input_quantity{
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  color: black;
+  background-color: rgb(245, 237, 237);
+  border: none;
+}
+
+.container-others-cards{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.cards-patron{
+  width: 100%;
+  justify-content: center;
+  gap: 70px;
+}
+
+.another-items{
+  padding-top: 50px;
+  padding-bottom: 100px
+}
+
+.card_others{
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding-top: 10px;
+  text-align: center;
+  width: 260px;
+  height: 360px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-others{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.title_others{
+  font-size: 21px;
+}
+
+.contain_carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 100vh;
+}
+
+.contain-description{
+  width: 500px;
+}
+
+.links{
+  text-decoration: none;
+  color: black;
+}
+
+
+.display_grid{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.rows{
+  padding-top: 30px;
+  
+  justify-content: flex-end;  
+  gap: 10px;
+  /* border: 2px solid blue; */
+}
+
+
+.cover_hero{
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 500px; */
+  flex-wrap: nowrap;
+}
+
+.body-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.title-bar{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+  background-color: black;
+
+}
+
+.accordion_price{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*////SECCIÓN DEL MODAL DE CARGA EN PANTALLA////*/
+.lds-roller {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(84, 84, 84, 0.43);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
