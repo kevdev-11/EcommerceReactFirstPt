@@ -1,43 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getProductsThunk } from '../store/products.slice';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
+import { getSettingThunk } from '../store/cart.slice.js';
+// import { motion, useMotionValue } from "framer-motion";
+import Footer from '../Components/Footer'
 
 const ProductsDetail = () => {
   ///Changes & hooks////
-  const [counter, setCounter] = useState(0);
+  // const [another, setAnother] = useState([]);
   // const [decrement, setDecrement]=useState(0);
-  // const [quantity, setQuantity]=useState(0);
-
+  const [quantity, setQuantity]=useState(0);
+  
+  
   const { id } = useParams();
   const dispatch = useDispatch();
-  const newList = useSelector(state => state.products);
-
+  const products = useSelector(state => state.products);
+  
   ////Operators&functions of changes/hooks/////
-  const findProducts = newList.find(detail => detail.id === Number(id));
+  const findProducts = products.find(detail => detail.id === Number(id));
 
-  const productFilter = newList.filter(find => find?.category.id === findProducts?.category.id && find?.id !== findProducts?.id);
-
-
+  const productFilter = products.filter(find => find?.category.id === findProducts?.category.id && find?.id !== findProducts?.id);
+  
+  
+  const addCart = (number) =>{
+    addNot = [];
+    if(number===0){
+      quantity.push(addNot)
+    }else{
+      const listCart = {
+        id: findProducts.id,
+        quantity: quantity
+      }
+      dispatch(getSettingThunk(listCart));
+      
+      // console.log(listCart);
+    }
+  }
+  
   const incrementCounter = () => {
-    setCounter(counter + 1)
+    setQuantity(quantity + 1)
   }
-
+  
   const decrementCounter = () => {
-
-    setCounter(counter - 1)
-
+    
+    setQuantity(quantity - 1)
+    
   }
-
-  console.log(productFilter);
-
+  
   useEffect(() => {
     dispatch(getProductsThunk())
-  }, [])
+  }, []);
+  
+  
+  console.log(products);
+  console.log(productFilter);
+  
 
-  console.log(findProducts);
   return (
     <div style={{width:'100%', height:'100%'}}>
       <div className='title-bar'>
@@ -81,12 +102,12 @@ const ProductsDetail = () => {
             <h5>{findProducts?.category?.name}</h5>
             <p>{findProducts?.description}</p>
             <div className='data-details-product'>
-              <Button variant='danger'>
+              <Button onClick={addCart} variant='danger'>
                 Add to cart
               </Button>
               <div>
-                <button className='quantity_btn' onClick={decrementCounter}>-</button>
-                <input className='input_quantity' type="text" value={counter} onChange={(e) => setCounter(e.target.value)} />
+                <button className='quantity_btn' onClick={decrementCounter} disabled={quantity===0}>-</button>
+                <input className='input_quantity' type="number" value={quantity} onChange={(e)=>setQuantity(e.target.value)} />
                 <button className='quantity_btn' onClick={incrementCounter}>+</button>
               </div>
               <div>
@@ -103,6 +124,7 @@ const ProductsDetail = () => {
         {/* d-flex w-100 justify-content-center align-items-center */}
           <Row xs={1} md={2} className="cards-patron">
             {productFilter.map((sameItems) => (
+            
               <Col lg={3}>
                 <div className='card_others'>
                   <h1 className='title_others'>{sameItems.title.slice(0,24)}</h1>
@@ -115,20 +137,34 @@ const ProductsDetail = () => {
                      <b>Price:</b>  <br /> ${sameItems.price}
                     </div>
                     <div>
-                      {/* <Link to={`/products/${property.id}`}> */}
-                      <button
-                      style={{backgroundColor:'#d12222', border:'none', color:'white', borderRadius:'50%', fontSize:'20px', width:'40px', height:'40px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+                      <Link to={`/products/${sameItems.id}`}>
+                      <button 
+                      style={{backgroundColor:'#d12222', 
+                      border:'none', 
+                      color:'white', 
+                      borderRadius:'50%', 
+                      fontSize:'20px', 
+                      width:'40px', 
+                      height:'40px', 
+                      display:'flex', 
+                      alignItems:'center', 
+                      justifyContent:'center'}}
+                      onClick={()=>dispatch(getProductsThunk(sameItems.id))}
+                      >
                         +
                         </button>
-                        {/* </Link> */}
-                    </div>
+                        </Link>
+                    </div> 
                   </div>
                 </div>
               </Col>
             ))}
+            
           </Row>
         </Container>
+
       </div>
+    <Footer></Footer>
     </div>
   );
 };
