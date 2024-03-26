@@ -34,7 +34,7 @@ function NavBar() {
            have chosen. Like, text, images, lists, etc.
          </Offcanvas.Body>
        </Offcanvas> */}
-    <Navbar style={{display:'fixed'}} bg="primary" expand="lg">
+    <Navbar style={{display:'fixed'}} bg="danger" expand="lg">
       <Container style={{fontSize:'20px',display:'flex',flexDirection:'row', alignItems:'center'}}>
         <Navbar.Brand style={{color:'blueviolet'}}>
           <img style={{width:'180px', height:'fit-content'}} src={nextlogo} alt="logo" />
