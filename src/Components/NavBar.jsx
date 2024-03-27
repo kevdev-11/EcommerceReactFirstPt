@@ -33,7 +33,7 @@ function NavBar() {
            have chosen. Like, text, images, lists, etc.
          </Offcanvas.Body>
        </Offcanvas> */}
-    <Navbar style={{display:'fixed', borderBottom:"2px solid gray",backgroundColor:"#88B6AB"}} expand="lg">
+    <Navbar style={{display:'sticky',backgroundColor:"#88B6AB"}} expand="lg">
       <Container style={{fontSize:'20px',display:'flex',flexDirection:'row', alignItems:'center'}}>
         <Navbar.Brand>
           <img style={{width:'150px', height:'fit-content'}} src={nextlogo} alt="logo" />
