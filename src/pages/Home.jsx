@@ -41,7 +41,7 @@ const Home = () => {
     return (
         <div className='cover_hero'>
             <section id='carrousel'>
-                <div >
+                <div className='bg-dark'>
                    <SliderImages/>
                 </div>
             </section>
