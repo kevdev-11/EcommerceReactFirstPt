@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 const SliderImages = () => {
 
@@ -8,8 +9,8 @@ const SliderImages = () => {
         "https://firebasestorage.googleapis.com/v0/b/dataimage-84486.appspot.com/o/carr3.webp?alt=media&token=7ec293ce-69ff-4de0-b389-922c8623cdcf"
     ]
 
-    console.log(elementSlider)
-    
+    console.log(elementSlider.map(e => e))
+
     return (
         <div style={{width:"100%", border:"1px solid blue"}}>
             <Carousel fade>
