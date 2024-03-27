@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-// import Offcanvas from 'react-bootstrap/Offcanvas';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import bagbuy from '../assets/bagbuy.svg';
 import { useState } from 'react';
 import CartShop from './CartShop';
