@@ -16,7 +16,7 @@ const SliderImages = () => {
     <Carousel slide fade>
       <Carousel.Item interval={3000}>
         <img
-            style={{width:'auto', height:'auto' }}
+            style={{width:'auto', height:'550px' }}
           className="d-block"
           src={elementSlider?.[0]}
           alt="First_slide"
@@ -24,7 +24,7 @@ const SliderImages = () => {
       </Carousel.Item>
        <Carousel.Item interval={10000}>
         <img
-        style={{width:'auto', height:'auto' }}
+        style={{width:'auto', height:'580px' }}
           className="d-block"
           src={elementSlider?.[1]}
           alt="Second_slide"
@@ -32,7 +32,7 @@ const SliderImages = () => {
       </Carousel.Item>
       <Carousel.Item interval={5000}>
         <img
-        style={{width:'auto', height:'auto' }}
+        style={{width:'auto', height:'550px' }}
           className="d-block"
           src={elementSlider?.[2]}
           alt="Third_slide"
