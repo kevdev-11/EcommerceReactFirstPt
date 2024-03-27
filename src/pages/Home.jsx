@@ -41,7 +41,7 @@ const Home = () => {
     return (
         <div className='cover_hero'>
             <section id='carrousel'>
-                <div className='bg-dark'>
+                <div style={{width:"100%", border:"1px solid blue"}}>
                    <SliderImages/>
                 </div>
             </section>

@@ -12,8 +12,8 @@ const SliderImages = () => {
     console.log(elementSlider.map(e => e))
 
     return (
-        <div style={{width:"100%", border:"1px solid blue"}}>
-            <Carousel fade>
+        <>
+    <Carousel slide fade>
       <Carousel.Item interval={3000}>
         <img
             style={{width:'auto', height:'auto' }}
@@ -39,7 +39,7 @@ const SliderImages = () => {
         />  
         </Carousel.Item> 
     </Carousel>
-        </div>
+        </>
     );
 };
 
