@@ -8,6 +8,7 @@ import bagbuy from '../assets/bagbuy.svg';
 import { useState } from 'react';
 import CartShop from './CartShop';
 import nextlogo from '../assets/nextlogo.svg';
+import { AiOutlineLogin } from "react-icons/ai";
 
 // import { getCheckoutThunk } from '../store/cart.slice';
 // import { useDispatch } from 'react-redux';
@@ -42,10 +43,10 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{width:'100%', justifyContent:'flex-end', gap:'30px'}} >
             {/* className="me-auto" */}
-            <Nav.Link style={{color:'white'}} as={Link} to="/">Home</Nav.Link>
-            <Nav.Link style={{color:'white'}} as={Link} to="/login">{" "}Login/Register{" "}</Nav.Link>
-            <Nav.Link style={{color:'white'}} as={Link} to="/Products">Products</Nav.Link>
-            <Nav.Link style={{color:'white'}} as={Link} to='/purchases'>Purchases</Nav.Link>
+            <Nav.Link style={{color:'white', fontSize:'15px'}} as={Link} to="/">Home</Nav.Link>
+            <Nav.Link style={{color:'white', fontSize:'14px'}} as={Link} to="/Products">Products</Nav.Link>
+            <Nav.Link style={{color:'white', fontSize:'13px'}} as={Link} to='/purchases'>Purchases</Nav.Link>
+            <Button variant='outline-secondary' style={{color:'white', fontSize:'13px'}} as={Link} to="/login">Login{" "}<AiOutlineLogin></AiOutlineLogin></Button>
             <Button onClick={handleShow} variant='dark'style={{color:'white'}}>
               Your orders <img style={{width:'20px'}} src={bagbuy} alt="" />
             </Button>
