@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
 import bagbuy from '../assets/bagbuy.svg';
 import { useState } from 'react';
 import CartShop from './CartShop';
@@ -23,7 +23,7 @@ function NavBar() {
 
   return (
     <>
-       <Offcanvas show={show} onHide={handleClose}>
+       {/* <Offcanvas show={show} onHide={handleClose}>
          <Offcanvas.Header closeButton>
            <Offcanvas.Title>Your orders on cart</Offcanvas.Title>
          </Offcanvas.Header>
@@ -32,7 +32,7 @@ function NavBar() {
            Some text as placeholder. In real life you can have the elements you
            have chosen. Like, text, images, lists, etc.
          </Offcanvas.Body>
-       </Offcanvas>
+       </Offcanvas> */}
     <Navbar style={{display:'fixed', borderBottom:"2px", border:"solid bluelight"}} expand="lg">
       <Container style={{fontSize:'20px',display:'flex',flexDirection:'row', alignItems:'center'}}>
         <Navbar.Brand style={{color:'blueviolet'}}>
