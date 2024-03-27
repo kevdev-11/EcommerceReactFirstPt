@@ -8,6 +8,8 @@ const SliderImages = () => {
         "https://firebasestorage.googleapis.com/v0/b/dataimage-84486.appspot.com/o/carr3.webp?alt=media&token=7ec293ce-69ff-4de0-b389-922c8623cdcf"
     ]
 
+    console.log(elementSlider)
+    
     return (
         <div style={{width:"100%", border:"1px solid blue"}}>
             <Carousel fade>
@@ -15,7 +17,7 @@ const SliderImages = () => {
         <img
             style={{width:'auto', height:'auto' }}
           className="d-block"
-          src={elementSlider[0]}
+          src={elementSlider?.[0]}
           alt="First_slide"
         />
       </Carousel.Item>
@@ -23,7 +25,7 @@ const SliderImages = () => {
         <img
         style={{width:'auto', height:'auto' }}
           className="d-block"
-          src={elementSlider[1]}
+          src={elementSlider?.[1]}
           alt="Second_slide"
         />
       </Carousel.Item>
@@ -31,7 +33,7 @@ const SliderImages = () => {
         <img
         style={{width:'auto', height:'auto' }}
           className="d-block"
-          src={elementSlider[2]}
+          src={elementSlider?.[2]}
           alt="Third_slide"
         />  
         </Carousel.Item> 
