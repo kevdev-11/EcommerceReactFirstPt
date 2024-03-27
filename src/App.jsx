@@ -8,6 +8,7 @@ import NavBar from './Components/NavBar';
 import LoadingPage from './Components/LoadingPage';
 import { useSelector } from 'react-redux';
 import ProtectedRute from './Components/ProtectedRute';
+import Footer from '../src/Components/Footer';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='products/:id' element={<ProductsDetail/>} />
         </Routes> 
+        <Footer></Footer>
       </HashRouter>
     </div>
   )

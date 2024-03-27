@@ -6,7 +6,6 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
 import { getSettingThunk } from '../store/cart.slice.js';
 // import { motion, useMotionValue } from "framer-motion";
-import Footer from '../Components/Footer'
 
 const ProductsDetail = () => {
   ///Changes & hooks////
@@ -164,7 +163,6 @@ const ProductsDetail = () => {
         </Container>
 
       </div>
-    <Footer></Footer>
     </div>
   );
 };
