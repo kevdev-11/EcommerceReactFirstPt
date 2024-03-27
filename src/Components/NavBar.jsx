@@ -33,10 +33,10 @@ function NavBar() {
            have chosen. Like, text, images, lists, etc.
          </Offcanvas.Body>
        </Offcanvas> */}
-    <Navbar style={{display:'fixed', borderBottom:"2px", border:"solid bluelight"}} expand="lg">
+    <Navbar style={{display:'fixed', borderBottom:"2px solid gray",backgroundColor:"#88B6AB"}} expand="lg">
       <Container style={{fontSize:'20px',display:'flex',flexDirection:'row', alignItems:'center'}}>
-        <Navbar.Brand style={{color:'blueviolet'}}>
-          <img style={{width:'180px', height:'fit-content'}} src={nextlogo} alt="logo" />
+        <Navbar.Brand>
+          <img style={{width:'150px', height:'fit-content'}} src={nextlogo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
