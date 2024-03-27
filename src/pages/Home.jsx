@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Cards from '../Components/Cards';
 import ListGroup from 'react-bootstrap/ListGroup';
 import AccordionItem from '../Components/AccordionItem';
+import SliderImages from '../Components/SliderImages';
 
 const Home = () => {
 
@@ -39,7 +40,11 @@ const Home = () => {
 
     return (
         <div className='cover_hero'>
-
+            <section id='carrousel'>
+                <div >
+                   <SliderImages/>
+                </div>
+            </section>
             <Row style={{ margin: '50px' }}>
                 <Col style={{ borderRight: '2px solid gray', height: 'fit-content' }} lg={2}>
                     <AccordionItem set={products} />
